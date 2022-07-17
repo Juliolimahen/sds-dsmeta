@@ -1,10 +1,11 @@
 import React from 'react'
+import NotificationButton from './Components/NotificationButton';
 
 const App = () => {
   return (
-    <h1>
-      Teste
-    </h1>
+    <>
+      <NotificationButton />
+    </>
   );
 }
 export default App
