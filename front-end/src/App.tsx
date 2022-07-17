@@ -1,10 +1,19 @@
 import React from 'react'
+import Header from './Components/Header';
 import NotificationButton from './Components/NotificationButton';
+import SalesCard from './Components/SalesCard';
 
 const App = () => {
   return (
     <>
-      <NotificationButton />
+      <Header />
+      <main>
+        <section id="sales">
+          <div className="dsmeta-container">
+            <SalesCard />
+          </div>
+        </section>
+      </main>
     </>
   );
 }
