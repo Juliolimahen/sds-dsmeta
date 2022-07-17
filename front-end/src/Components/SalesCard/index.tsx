@@ -19,11 +19,18 @@ const SalesCard = () => {
     const [sales, setSales] = useState<Sale[]>([]);
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/sales`)
+
+        /**Recortar data */
+        const dmin = minDate.toISOString().slice(0, 10);
+        const dmax = maxDate.toISOString().slice(0, 10);
+
+        axios.get(`${BASE_URL}/sales?minDate=${dmin}&maxDate=${dmax}`)
             .then(response => {
                 setSales(response.data.content);
             });
-    }, []);
+
+        /** Passando para o React que quando um desse dados for alterado devará recarregar*/
+    }, [minDate, maxDate]);
 
     return (
         <div className="dsmeta-card">
