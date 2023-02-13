@@ -3,6 +3,8 @@
 
 # Sobre o projeto
 
+Web app de vandas com integração com api de sms da twilio.
+
 https://dsmeta-juliohen.netlify.app/
 
 O projeto consiste em um sistema de vendas com Dashboard
